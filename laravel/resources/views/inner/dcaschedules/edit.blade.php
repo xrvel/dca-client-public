@@ -313,21 +313,23 @@
 						<div class="col-md-6">
 							<div class="mb-3">
 								<label for="reset_mode" class="form-label">Reset Mode</label>
-															<div class="form-text">
-								<strong>Relative (Recommended):</strong> Reset counter after the interval period from your last extra buy.<br>
-								<strong>Absolute:</strong> Reset counter on calendar boundaries (requires reliable cron timing).<br>
-								<small class="text-muted">
-									• <strong>Relative:</strong> More reliable, self-healing, no cron dependency<br>
-									• <strong>Absolute:</strong> Calendar-aligned but requires precise cron timing<br>
-									• Daily: Relative (24h after last buy) vs Absolute (00:00 daily)<br>
-									• Weekly: Relative (7 days after last buy) vs Absolute (Monday 00:00)<br>
-									• Monthly: Relative (30 days after last buy) vs Absolute (1st of month 00:00)
-								</small>
-							</div>
-															<select class="form-select @error('reset_mode') is-invalid @enderror" id="reset_mode" name="reset_mode">
-								<option value="1" @selected(old('reset_mode', $dcaschedule->reset_mode) == 1)>Relative (recommended) - Reset after interval from last extra buy</option>
-								<option value="2" @selected(old('reset_mode', $dcaschedule->reset_mode) == 2)>Absolute - Reset on calendar boundaries (requires reliable cron)</option>
-							</select>
+								<div class="form-text">
+									<strong>Relative (Recommended):</strong> Reset counter after the interval period from your last extra buy.<br>
+									<strong>Absolute:</strong> Reset counter on calendar boundaries (requires reliable cron timing).<br>
+									<small class="text-muted">
+										• <strong>Relative:</strong> More reliable, self-healing, no cron dependency<br>
+										• <strong>Absolute:</strong> Calendar-aligned but requires precise cron timing<br>
+										• Daily: Relative (24h after last buy) vs Absolute (00:00 daily)<br>
+										• Weekly: Relative (7 days after last buy) vs Absolute (Monday 00:00)<br>
+										• Monthly: Relative (30 days after last buy) vs Absolute (1st of month 00:00)
+									</small>
+								</div>
+								<select class="form-select @error('reset_mode') is-invalid @enderror" id="reset_mode" name="reset_mode">
+									<option value="1" @selected(old('reset_mode', $dcaschedule->reset_mode) == 1)>Relative (recommended) - Reset after interval from last
+										extra buy</option>
+									<option value="2" @selected(old('reset_mode', $dcaschedule->reset_mode) == 2)>Absolute - Reset on calendar boundaries (requires reliable
+										cron)</option>
+								</select>
 								@error('reset_mode')
 									<div class="invalid-feedback">{{ $message }}</div>
 								@enderror
