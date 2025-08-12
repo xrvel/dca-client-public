@@ -111,12 +111,14 @@ class MyExchange
 			'binance_proxy' => 'Binance Proxy',
 		];
 
-		// Add CCXT supported exchanges
+		// Add CCXT supported exchanges (only if not already defined)
 		$ccxt = new MyCcxtExchange();
 		$ccxt_exchanges = $ccxt->get_supported_exchanges();
 
 		foreach ($ccxt_exchanges as $exchange) {
-			$exchanges[$exchange] = ucfirst($exchange);
+			if (!isset($exchanges[$exchange])) {
+				$exchanges[$exchange] = ucfirst($exchange);
+			}
 		}
 
 		return $exchanges;
