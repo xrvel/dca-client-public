@@ -45,10 +45,10 @@ class MyTestCcxtExchanges extends Command
             $our_exchanges = [
                 'binance', 'kraken', 'bybit', 'indodax', 'okx', 'kucoin', 
                 'gate', 'huobi', 'bitfinex', 'bitstamp', 'gemini', 
-                'binanceus', 'coinbase', 'coinbasepro', 'bitget', 'mexc', 
-                'whitebit', 'cryptocom', 'bitflyer', 'liquid', 'poloniex', 
-                'bittrex', 'hitbtc', 'cex', 'bitmart', 'lbank', 'digifinex', 
-                'coinex', 'ascendex', 'bigone', 'bitforex', 'btcmarkets', 'btcturk'
+                'binanceus', 'coinbase', 'bitget', 'mexc', 
+                'cryptocom', 'poloniex', 
+                'hitbtc', 'coinex',
+                'tokocrypto'
             ];
             
             $this->info("\nChecking our supported exchanges:");
@@ -95,6 +95,7 @@ class MyTestCcxtExchanges extends Command
                 'bitfinex' => '\ccxt\bitfinex',
                 'bitstamp' => '\ccxt\bitstamp',
                 'gemini' => '\ccxt\gemini',
+                'tokocrypto' => '\ccxt\tokocrypto',
             ];
             
             foreach ($class_tests as $exchange => $class_name) {

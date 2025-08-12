@@ -25,24 +25,12 @@ class MyCcxtExchange
         'binanceus' => \ccxt\binanceus::class,
         'binanceproxy' => \ccxt\binance::class, // Use binance class for proxy
         'coinbase' => \ccxt\coinbase::class,
-        'coinbasepro' => \ccxt\coinbasepro::class,
         'bitget' => \ccxt\bitget::class,
-        'whitebit' => \ccxt\whitebit::class,
-        'bitflyer' => \ccxt\bitflyer::class,
-        'liquid' => \ccxt\liquid::class,
         'poloniex' => \ccxt\poloniex::class,
-        'bittrex' => \ccxt\bittrex::class,
         'hitbtc' => \ccxt\hitbtc::class,
-        'cex' => \ccxt\cex::class,
-        'bitmart' => \ccxt\bitmart::class,
-        'lbank' => \ccxt\lbank::class,
-        'digifinex' => \ccxt\digifinex::class,
         'coinex' => \ccxt\coinex::class,
-        'ascendex' => \ccxt\ascendex::class,
-        'bigone' => \ccxt\bigone::class,
-        'bitforex' => \ccxt\bitforex::class,
-        'btcmarkets' => \ccxt\btcmarkets::class,
-        'btcturk' => \ccxt\btcturk::class,
+        'tokocrypto' => \ccxt\tokocrypto::class, // Indonesian exchange
+        'kucoin' => \ccxt\kucoin::class,
     ];
 
     private $pair_formats = [
@@ -56,23 +44,11 @@ class MyCcxtExchange
         'bitfinex' => 'slash',
         'bitstamp' => 'slash',
         'coinbase' => 'slash',
-        'coinbasepro' => 'slash',
-        'whitebit' => 'slash',
-        'bitflyer' => 'slash',
-        'liquid' => 'slash',
         'poloniex' => 'slash',
-        'bittrex' => 'slash',
         'hitbtc' => 'slash',
-        'cex' => 'slash',
-        'bitmart' => 'slash',
-        'lbank' => 'slash',
-        'digifinex' => 'slash',
         'coinex' => 'slash',
-        'ascendex' => 'slash',
-        'bigone' => 'slash',
-        'bitforex' => 'slash',
-        'btcmarkets' => 'slash',
-        'btcturk' => 'slash',
+        'tokocrypto' => 'concat', // BTCUSDT format (similar to Binance)
+        'kucoin' => 'concat', // BTCUSDT format (similar to Binance)
     ];
 
     public function __construct()
