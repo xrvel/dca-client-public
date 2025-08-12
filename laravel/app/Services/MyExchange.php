@@ -7,8 +7,8 @@ use Illuminate\Support\Facades\Log;
 
 use App\Services\MyBinance;
 use App\Services\MyBinanceProxy;
-use App\Services\MyIndodax;
 use App\Services\MyCcxtExchange;
+use App\Services\MyIndodax;
 
 class MyExchange
 {
